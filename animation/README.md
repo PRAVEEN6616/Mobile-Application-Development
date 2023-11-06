@@ -1,9 +1,10 @@
-# Ex.No: 11 Develop a application to add animations to ImageView,Move,blink,fade,clockwise,zoom,slide operations are perform in android studio.
+
+# Ex.No:12 Design an application that draws basic graphical primitives on the screen.
 
 
 ## AIM:
 
-To develop a application to add animation to imageview,move,blink,fade,clockwise,zoom,slide operation using Android Studio.
+To create and design an android application that draws basic graphical primitives on the screen using Android Studio.
 
 ## EQUIPMENTS REQUIRED:
 
@@ -11,9 +12,9 @@ Android Studio(Latest Version)
 
 ## ALGORITHM:
 
-Step 1: Open Android Studio and then click on File -> New -> New project.
+Step 1: Open Android Stdio and then click on File -> New -> New project.
 
-Step 2: Then type the Application name as HelloWorld and click Next.
+Step 2: Then type the Application name as “graphical″ and click Next. 
 
 Step 3: Then select the Minimum SDK as shown below and click Next.
 
@@ -21,15 +22,15 @@ Step 4: Then select the Empty Activity and click Next. Finally click Finish.
 
 Step 5: Design layout in activity_main.xml.
 
-Step 6: Display message give in MainActivity file.
+Step 6: Draw basic object details give in MainActivity file.
 
 Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
 /*
-Program to display animation operation”.
-Developed by:praveen pv
+Program to create and design an android application that draws basic graphical primitives on the screen.
+Developed by: praveen pv
 Registeration Number : 212221040131
 */
 ```
@@ -45,301 +46,77 @@ activity_main.xml:
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="234dp"
-        android:layout_height="149dp"
+        android:layout_width="413dp"
+        android:layout_height="736dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199"
-        app:srcCompat="@drawable/shinchan" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/BTNblink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BLINK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
-
-    <Button
-        android:id="@+id/BTNrotate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ROTATE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
-
-    <Button
-        android:id="@+id/BTNfade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FADE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
-
-    <Button
-        android:id="@+id/BTNmove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MOVE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
-
-    <Button
-        android:id="@+id/BTNslide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SLIDE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
-
-    <Button
-        android:id="@+id/BTNzoom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ZOOM"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
-
-    <Button
-        android:id="@+id/BTNstop"
-        android:layout_width="380dp"
-        android:layout_height="51dp"
-        android:text="STOP ANIMATION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-```
-blink.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <alpha android:fromAlpha="0.0"
-        android:toAlpha="1.0"
-        android:interpolator="@android:anim/accelerate_interpolator"
-        android:duration="500"
-        android:repeatMode="reverse"
-        android:repeatCount="infinite"/>
-</set>
-```
-rotate.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <rotate
-        android:duration="6000"
-        android:fromDegrees="0"
-        android:pivotX="50%"
-        android:pivotY="50%"
-        android:toDegrees="360" />
-
-    <rotate
-        android:duration="6000"
-        android:fromDegrees="360"
-        android:pivotX="50%"
-        android:pivotY="50%"
-        android:startOffset="5000"
-        android:toDegrees="0" />
-</set>
-```
-fade.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- duration is the time for which animation will work-->
-    <alpha
-        android:duration="1000"
-        android:fromAlpha="0"
-        android:toAlpha="1" />
-    <alpha
-        android:duration="1000"
-        android:fromAlpha="1"
-        android:startOffset="2000"
-        android:toAlpha="0" />
-</set>
-```
-move.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <translate
-        android:fromXDelta="0%p"
-        android:toXDelta="75%p"
-        android:duration="700" />
-</set>
-```
-slide.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <scale
-        android:duration="500"
-        android:fromXScale="1.0"
-        android:fromYScale="1.0"
-        android:interpolator="@android:anim/linear_interpolator"
-        android:toXScale="1.0"
-        android:toYScale="0.0" />
-</set>
-```
-zoom.xml:
-```
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <scale xmlns:android="http://schemas.android.com/apk/res/android"
-        android:fromXScale="0.5"
-        android:toXScale="3.0"
-        android:fromYScale="0.5"
-        android:toYScale="3.0"
-        android:duration="1000"
-        android:pivotX="25%"
-        android:pivotY="25%" >
-    </scale>
-    <scale xmlns:android="http://schemas.android.com/apk/res/android"
-        android:startOffset="1000"
-        android:fromXScale="3.0"
-        android:toXScale="0.5"
-        android:fromYScale="3.0"
-        android:toYScale="0.5"
-        android:duration="1000"
-        android:pivotX="25%"
-        android:pivotY="25%" >
-    </scale>
-</set>
 ```
 MainActivity.java:
 ```
-package com.example.animations;
+package com.example.graphics;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
+
 public class MainActivity extends AppCompatActivity {
-    ImageView imageView;
-    Button blinkBTN, rotateBTN, fadeBTN, moveBTN, slideBTN, zoomBTN, stopBTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = findViewById(R.id.imageView);
-        blinkBTN = findViewById(R.id.BTNblink);
-        rotateBTN = findViewById(R.id.BTNrotate);
-        fadeBTN = findViewById(R.id.BTNfade);
-        moveBTN = findViewById(R.id.BTNmove);
-        slideBTN = findViewById(R.id.BTNslide);
-        zoomBTN = findViewById(R.id.BTNzoom);
-        stopBTN = findViewById(R.id.BTNstop);
+        //Creating a Bitmap
+        Bitmap bg = Bitmap.createBitmap(720, 1280, Bitmap.Config.ARGB_8888);
 
-        blinkBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add blink animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
-                imageView.startAnimation(animation);
-            }
-        });
+        //Setting the Bitmap as background for the ImageView
+        ImageView i = (ImageView) findViewById(R.id.imageView);
+        i.setBackgroundDrawable(new BitmapDrawable(bg));
 
-        rotateBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add rotate animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-                imageView.startAnimation(animation);
-            }
-        });
-        fadeBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add fade animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
-                imageView.startAnimation(animation);
-            }
-        });
-        moveBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add move animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
-                imageView.startAnimation(animation);
-            }
-        });
-        slideBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add slide animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
-                imageView.startAnimation(animation);
-            }
-        });
-        zoomBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To add zoom animation
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom);
-                imageView.startAnimation(animation);
-            }
-        });
-        stopBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // To stop the animation going on imageview
-                imageView.clearAnimation();
-            }
-        });
+        //Creating the Canvas Object
+        Canvas canvas = new Canvas(bg);
+
+        //Creating the Paint Object and set its color & TextSize
+        Paint paint = new Paint();
+        paint.setColor(Color.BLUE);
+        paint.setTextSize(50);
+
+        //To draw a Rectangle
+        canvas.drawText("Rectangle", 420, 150, paint);
+        canvas.drawRect(400, 200, 650, 700, paint);
+
+        //To draw a Circle
+        canvas.drawText("Circle", 120, 150, paint);
+        canvas.drawCircle(200, 350, 150, paint);
+
+        //To draw a Square
+        canvas.drawText("Square", 120, 800, paint);
+        canvas.drawRect(50, 850, 350, 1150, paint);
+
+        //To draw a Line
+        canvas.drawText("Line", 480, 800, paint);
+        canvas.drawLine(520, 850, 520, 1150, paint);
     }
-
 }
 ```
 ## OUTPUT
 
 Code With Emulator:
-![Screenshot (195)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/17f1c2db-3149-4e65-addd-c0494119f7ea)
+![Screenshot (202)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/c3f18e0e-0d4b-4f44-a359-73917834c253)
 
-Rotate:
-![Screenshot (196)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/f21ff649-7259-4e6d-9d4d-25b6253b5ff7)
+Emulator:
+![Screenshot (203)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/3dfd2ffb-d7f6-4206-b100-683c4498dfac)
 
-Zoom:
-![Screenshot (197)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/ac5605aa-edd6-481c-a9fb-db239d908c01)
-
-Move:
-![Screenshot (198)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/ff17223a-068b-4bc6-979b-487c48baa20a)
-
-Fade:
-![Screenshot (199)](https://github.com/Vasanth1234567/Mobile-Application-Development/assets/86919099/f44b3044-f004-43ae-9dd7-9271923ab18d)
 
 
 ## RESULT
-Thus, to develop a application to add animation to imageview,move,blink,fade,clockwise,zoom,slide operation using Android Studio has been executed successfully.
+Thus a Simple Android Application to create and design an android application that draws basic graphical primitives on the screen using Android Studio is developed and executed successfully.
